@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { CLIENT_ID, REDIRECT_URI, SCOPE, BASE_URL } from '../../Constants/Auth'
+import { Button } from '@chakra-ui/react'
+import { FiLogIn } from 'react-icons/fi'
 
 const AUTH_URL = `${BASE_URL}?client_id=${CLIENT_ID}&scope=${SCOPE}&redirect_uri=${REDIRECT_URI}&response_type=token&show_dialog=true`
 
@@ -30,7 +32,8 @@ const Auth = () => {
     }
   return (
     <div>
-        <button onClick={handleClick}>Login</button>
+        {/* <button onClick={handleClick}>Login</button> */}
+        <Button colorScheme='whatsapp' leftIcon={ <FiLogIn/> } onClick={handleClick}>Login to Spotify</Button>
     </div>
   )
 }

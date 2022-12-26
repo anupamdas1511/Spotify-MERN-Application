@@ -2,11 +2,13 @@
 // import './App.css';
 import React from "react";
 import Auth from "./Components/Auth/Auth";
+import { ChakraProvider } from '@chakra-ui/react'
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
+    <ChakraProvider>
+      <div className="App">
+        {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,8 +22,9 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Auth />
-    </div>
+        <Auth />
+      </div>
+    </ChakraProvider>
   );
 }
 
