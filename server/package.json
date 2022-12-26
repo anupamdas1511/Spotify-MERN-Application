@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "This is the backend of the project spotify-mern-application",
   "main": "index.js",
+  "type": "CommonJS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "Anupam das",
   "license": "ISC",
