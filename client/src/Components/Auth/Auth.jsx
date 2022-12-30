@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Navbar from '../Navbar/Navbar'
 import { CLIENT_ID, REDIRECT_URI, SCOPE, BASE_URL } from '../../Constants/Auth'
 import { Button, Container } from '@chakra-ui/react'
 import { FiLogIn } from 'react-icons/fi'
@@ -34,7 +33,6 @@ const Auth = () => {
     return (
         <div>
             {/* <button onClick={handleClick}>Login</button> */}
-            <Navbar />
             <Container h='85vh' display='flex' alignItems='center' justifyContent='center'>
                 <Button colorScheme='whatsapp' sizes='xl' leftIcon={<FiLogIn />} onClick={handleClick}>Login to Spotify</Button>
 
