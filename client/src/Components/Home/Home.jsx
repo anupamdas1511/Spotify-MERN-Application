@@ -2,7 +2,7 @@ import React from 'react'
 // import Auth from '../Auth/Auth'
 // import Dashboard from '../Dashboard/Dashboard'
 // import About from '../About/About'
-import Section from '../Sections/Section'
+// import Section from '../Sections/Section'
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         {/* <Auth /> */}
         {/* <Dashboard /> */}
         {/* <About /> */}
-        <Section />
+        {/* <Section /> */}
     </div>
   )
 }
