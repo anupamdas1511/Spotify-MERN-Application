@@ -32,7 +32,6 @@ const Navbar = () => {
   const API = axios.create({ baseURL: 'https://api.spotify.com' })
   console.log(JSON.parse(localStorage.getItem('access_token')))
   const handleSearch = () => {
-    // console.log(searchInput)
     API.interceptors.request.use(req => {
       if (localStorage.getItem('access_token')) {
         req.headers.Authorization = `Bearer ${localStorage.getItem('access_token')}`

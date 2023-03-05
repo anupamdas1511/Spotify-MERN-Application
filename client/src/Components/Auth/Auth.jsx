@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { CLIENT_ID, REDIRECT_URI, SCOPE, BASE_URL } from '../../Constants/Auth'
+import { AUTH_URL } from '../../Constants/Auth'
 import { Button, Container } from '@chakra-ui/react'
 import { FiLogIn } from 'react-icons/fi'
-
-const AUTH_URL = `${BASE_URL}?client_id=${CLIENT_ID}&scope=${SCOPE}&redirect_uri=${REDIRECT_URI}&response_type=token&show_dialog=true`
-
-// http://localhost:3000/#access_token=BQDpJRH0smVq2LZQy_BLJWh_qdHSKekSpZhHlf_MCXBXItXq2pOKOxXri4eglaognujXvXtHoBSuo7KV5kxubI8Q2tf95RHDVeuznXOEVdHCDUvW07AyBuXmqMDXClUamW9rDJ80SJG158GDPcSo2V4xfQ-jZwTwXFX8AAQGiG7w6CJZCqsmJkRJnfBh2w5m-szE3MUWvABL5XkvhSFOqffd&token_type=Bearer&expires_in=3600
 
 const Auth = () => {
     const history = useHistory()
@@ -20,9 +16,6 @@ const Auth = () => {
         }, {})
         return splitedParams
     }
-    // useEffect(()=>{
-    //     localStorage.clear()
-    // }, [])
     useEffect(() => {
         if (window.location.hash) {
             const { access_token, token_type, expires_in } = getParamsFromSpotifyAuth(window.location.hash)

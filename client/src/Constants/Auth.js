@@ -9,3 +9,5 @@ export const SCOPE_PARAMS = ['user-read-email', 'user-read-currently-playing', '
 export const SCOPE = SCOPE_PARAMS.join('%20')
 
 export const BASE_URL = 'https://accounts.spotify.com/authorize'
+
+export const AUTH_URL = `${BASE_URL}?client_id=${CLIENT_ID}&scope=${SCOPE}&redirect_uri=${REDIRECT_URI}&response_type=token&show_dialog=true`
